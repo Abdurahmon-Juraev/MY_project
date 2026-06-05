@@ -1,0 +1,148 @@
+
+    1-kun — Setup day
+Django + DRF setup
+PostgreSQL ulash
+Custom User model
+JWT auth
+Base apps yaratish
+Docker setup
+Swagger
+
+    2-kun — Users & Roles
+Admin
+Manager
+Cashier
+Sales
+Permission system
+Role based access
+
+    3-kun — CRM Lead module
+Lead model
+Lead CRUD
+Status:
+new
+contacted
+qualified
+converted
+Lead owner
+
+4-kun — CRM Client + Deal
+Client model
+Deal model
+Pipeline stages
+Lead → Client convert
+Deal value
+    📅 5-kun — CRM Tasks
+Task model
+Reminder
+Deadline
+Assign task
+Notes
+Follow-up
+    📅 6-kun — Product module
+Product CRUD
+Category
+SKU
+Barcode
+Price
+Cost price
+    📅 7-kun — Inventory core
+Stock model
+Warehouse
+Quantity
+Low stock alert
+Supplier
+    📅 8-kun — POS Sales
+Cart
+Sale model
+Sale items
+Payment type
+Discount
+Tax
+    📅 9-kun — Receipt system
+Receipt serializer
+Invoice number
+PDF receipt
+Print endpoint
+Sale history
+    📅 10-kun — Expense + Shift
+Expense CRUD
+Shift open/close
+Cashier balance
+Shift summary
+    📅 11-kun — Inventory automation
+Sale bo‘lsa stock kamayishi
+Return bo‘lsa stock oshishi
+Signals
+Atomic transaction
+    📅 12-kun — Reports
+Daily sales
+Monthly sales
+CRM conversion
+Profit report
+Top products
+Top sales manager
+    📅 13-kun — Filters & Search
+django-filter
+SearchFilter
+Ordering
+Pagination
+Date range filter
+    📅 14-kun — Optimization
+select_related
+prefetch_related
+indexes
+query optimization
+caching basics
+    📅 15-kun — Deployment day
+Docker compose
+Gunicorn
+Nginx
+CI/CD
+Render / VPS deploy
+README
+Postman collection
+🎯 Final endpoint structure
+/api/auth/
+/api/users/
+/api/crm/leads/
+/api/crm/clients/
+/api/crm/deals/
+/api/products/
+/api/inventory/
+/api/sales/
+/api/reports/
+💼 CV uchun project nomi
+
+Senga zo‘r nom:
+
+Smart ERP API
+CRM + POS + Inventory Management System
+
+Bu CV’da juda premium ko‘rinadi
+
+
+🔥 Xulosa
+CRM → mijozlarni boshqarish, lead → client
+POS → sotuvni boshqarish, receipt, cash tracking
+Inventory → mahsulotni boshqarish, stock monitoring
+
+Ular bir-biriga bog‘liq:
+
+CRM client → POS sale
+POS sale → Inventory update
+Reports modul → barcha ma’lumotlarni birlashtiradi
+
+Leads → Clients: CRM orqali
+Client → Sale: POS orqali
+Sale → Inventory: mahsulot stock kamayadi
+Reports: har bir moduldan ma’lumot oladi
+
+5️⃣ Ishlash logikasi (step by step)
+Sales manager CRM’da lead yaratadi
+Lead muloqotdan keyin clientga aylanadi
+Client POS orqali buyurtma qiladi
+Sale record POS’da yaratiladi
+Mahsulot inventory’dan avtomatik kamayadi
+Har bir deal va sale CRM va Reports’da ko‘rinadi
+Reports → admin foydasi, best seller, monthly profit
