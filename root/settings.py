@@ -119,16 +119,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_URL = '/static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'madia')
+
+
+# Указывает Django, где искать общую папку со статикой
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 
+
+     'DEFAULT_AUTHENTICATION_CLASSES':[
+         # 'rest_framework.authentication.BasicAuthentication',
+         # 'rest_framework.authentication.SessionAuthentication',
+]
+
+
 }
+
+
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'DRF p37 projenct',

@@ -1,13 +1,15 @@
+from os import name
 
-from django.contrib import admin
+from api.site import views
 from django.urls import path, include
-#from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 
 urlpatterns = [
-     path('v1/admin/', include('api.admin.urls')),
-     path('v1/site/', include('api.site.urls')),
-     path('v1/testing/', include('api.testing.urls'))
+     path('', views.home, name='home'),
+     path('contact/', views.contact, name='contact'),
+
+     path('blog/',views.blog, name='blog'),
+     path ('services/',views.services,name='services')
 
 ]
 
