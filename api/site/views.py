@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def home(request):
-
+        
     data = {
         "name": "John"
     }

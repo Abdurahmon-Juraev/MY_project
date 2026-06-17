@@ -146,3 +146,32 @@ Sale record POS’da yaratiladi
 Mahsulot inventory’dan avtomatik kamayadi
 Har bir deal va sale CRM va Reports’da ko‘rinadi
 Reports → admin foydasi, best seller, monthly profit
+
+
+
+
+
+
+      source .venv/bin/activate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

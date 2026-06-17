@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
 
     # path('api/schema', SpectacularAPIView.as_view(), name='schema'),
     # path('', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
